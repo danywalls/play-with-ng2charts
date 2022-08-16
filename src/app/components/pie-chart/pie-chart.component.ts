@@ -1,4 +1,4 @@
-import { ChartOptions } from 'chart.js';
+import { ChartOptions, ChartType } from 'chart.js';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,21 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pie-chart.component.css'],
 })
 export class PieChartComponent implements OnInit {
-  public pieChartOptions: ChartOptions<'pie'> = {
+  public options: ChartOptions<'pie'> = {
     responsive: false,
   };
-  public pieChartLabels = [
-    ['Angular', 'React'],
-    ['Riot', 'Svelte', 'Vue'],
-    'Chio',
-  ];
-  public pieChartDatasets = [
+  public labels = [['Angular', 'React'], ['Riot', 'Svelte', 'Vue'], 'Chio'];
+  public datasets = [
     {
       data: [300, 500, 100, 20, 22],
     },
   ];
-  public pieChartLegend = true;
-  public pieChartPlugins = [];
+  public legend = true;
 
   constructor() {}
 

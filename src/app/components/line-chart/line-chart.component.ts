@@ -28,10 +28,11 @@ export class LineChartComponent implements OnInit {
       },
     ],
   };
-  public lineChartOptions: ChartOptions<'line'> = {
+
+  public options: ChartOptions<'line'> = {
     responsive: false,
   };
-  public lineChartLegend = true;
+  public legend = true;
 
   constructor() {}
 
